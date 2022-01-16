@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+
+:root {
+    --cor-cinza-escuro:#252525;
+    --cor-cinza: #616161;
+    --cor-vermelha: #9F1501;
+    --cor-azul: #020459;
+    --cor-amarelo: #E5CF25;
+}
+
+body {
+    background-color: #000;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#top .top {
+    width: 100%;
+    height: auto;
+    background-color: var(--cor-cinza-escuro);
+    padding: 2rem;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#top .top img {
+    width: 8rem;
+    height: auto;
+}
+
+#banner .banner {
+    width: 100%;
+    height: 50vh;
+}
+
+#titulo {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+
+}
+
+#principal {
+    background-image: url(img/wallpaper-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+#placar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogador, #computador {
+    position: relative;
+    flex-grow: 1;
+    border-radius: 20rem;
+    width: 200px;
+    padding: 20px;
+    color: #fff;
+}
+
+#jogador {
+    background-color: var(--cor-azul);
+    
+}
+
+#computador {
+    background-color: var(--cor-vermelha);
+}
+
+#versus {
+    font-size: 40px;
+    text-align: center;
+    width: 70px;
+    color: var(--cor-vermelha);
+}
+
+#jogador-nome, #computador-nome {
+    margin: 0;
+    padding: 0;
+}
+
+#jogador-nome {
+    text-align: right;
+    position: relative;
+    bottom: 5rem;
+    padding: .8rem;
+    color: #fff;
+    background: linear-gradient(to left, rgba(159,21,1,1) 0%,rgba(125,185,232,0) 100%);
+}
+
+#computador-nome {
+    text-align: right;
+    position: relative;
+    bottom: 5rem;
+    padding: .8rem;
+    color: #fff;
+    background: linear-gradient(to left, rgba(159,21,1,1) 0%,rgba(125,185,232,0) 100%);
+}
+
+#jogador-pontos {
+    position: relative;
+    bottom: 8rem;
+    font-size: 32px;
+    right: 0rem;
+    color: var(--cor-cinza-escuro);
+    padding: 1.2rem;
+    border-radius: 20rem;
+    background-color: var(--cor-amarelo);
+    
+}
+
+#computador-pontos {
+    position: relative;
+    bottom: 8rem;
+    font-size: 32px;
+    color: var(--cor-cinza-escuro);
+    padding: 1rem;
+    border-radius: 20rem;
+    background-color: var(--cor-amarelo);
+
+}
+
+ul#jogador-escolha, ul#computador-escolha {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul#jogador-escolha li, ul#computador-escolha li {
+    display: inline;
+}
+
+ul#jogador-escolha li a, ul#computador-escolha li a {
+    opacity: .2;
+    filter: contrast(0%);
+}
+ul#jogador-escolha li a:hover, ul#jogador-escolha li a.selecionado, ul#computador-escolha li a.selecionado {
+    opacity: 1;
+    filter: contrast(100%);
+
+}
+
+ul#jogador-escolha li a img, ul#computador-escolha li a img {
+    max-width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+}
+
+#mensagem-all {
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+#mensagens {
+    color: var(--cor-cinza-escuro);
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--cor-amarelo);
+    border-radius: 5px;
+   
+}   
+
+.info {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.info h1 {
+    padding-bottom: 1rem;
+    color: var(--cor-vermelha);
+}
+
+.info h3 {
+    padding: 1rem 0;
+    color: var(--cor-vermelha);
+}
+
+.info p {
+    color: #fff;
+    font-style: italic;
+    font-size: 1rem;
+    
+}
+
+#rodape .rodape {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--cor-cinza-escuro);
+}
+
+#rodape .rodape p {
+    color: #fff;
+    font-size: .8rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 1030px) {
+
+    #placar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #jogador, #computador {
+        padding: 3rem;
+        border-radius: 30rem;
+        
+    } 
+
+    #jogador h2 {
+       position: relative;
+       bottom: 7rem;
+    }
+
+    #jogador-pontos {
+        position: relative;
+        bottom: 10rem;
+    }
+
+    #computador h2 {
+        position: relative;
+        bottom: 7rem;
+     }
+ 
+     #computador-pontos {
+         position: relative;
+         bottom: 10rem;
+     }
+
+     .info {
+        width: 100%;
+        padding: 5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+     #jogador, #computador {
+        padding: 6rem;
+        border-radius: 30rem;
+        
+    } 
+
+    #jogador h2 {
+       position: relative;
+       bottom: 10rem;
+    }
+
+    #jogador-pontos {
+        position: relative;
+        bottom: 13rem;
+    }
+
+    #computador h2 {
+        position: relative;
+        bottom: 10rem;
+     }
+ 
+     #computador-pontos {
+         position: relative;
+         bottom: 13rem;
+     }
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+    #jogador, #computador {
+        padding: 8rem;
+        border-radius: 30rem;
+        
+    } 
+
+    #jogador h2 {
+       position: relative;
+       bottom: 12rem;
+    }
+
+    #jogador-pontos {
+        position: relative;
+        bottom: 15rem;
+    }
+
+    #computador h2 {
+        position: relative;
+        bottom: 12rem;
+     }
+ 
+     #computador-pontos {
+         position: relative;
+         bottom: 15rem;
+     }
+
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    #jogador, #computador {
+      background-color: transparent;
+        padding: 2rem;
+        border-radius: 30rem;
+        
+    } 
+
+    ul#jogador-escolha li a img, ul#computador-escolha li a img {
+        max-width: 12rem;
+        height: 12rem;
+    }
+
+    #jogador h2 {
+       position: relative;
+       bottom: 0;
+    }
+
+    #jogador-pontos {
+        position: relative;
+        bottom: 3rem;
+    }
+
+    #computador h2 {
+        position: relative;
+        bottom: 0;
+     }
+ 
+     #computador-pontos {
+         position: relative;
+         bottom: 3rem;
+     }
+
+}
+
+@media only screen and (min-width: 2850px) {
+
+    #placar {
+        width: 50%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        left: 20rem;
+    }
+
+
+    #jogador h2 {
+       position: relative;
+       bottom: 5rem;
+    }
+
+    #jogador-pontos {
+        position: relative;
+        bottom: 8rem;
+    }
+
+    #computador h2 {
+        position: relative;
+        bottom: 5rem;
+     }
+ 
+     #computador-pontos {
+         position: relative;
+         bottom: 8rem;
+     }
+
+     .info {
+         background-color: rgba(29,29,29, 1);
+     }
+
+}
